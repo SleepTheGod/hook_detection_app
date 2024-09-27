@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Detected Hooks</title>
+</head>
+<body>
+    <header>
+        <h1>Detected Hooks</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+    </nav>
+    <main>
+        <h2>Hooks Log</h2>
+        <ul>
+            {% for alert in alerts %}
+                <li>Syscall Number: {{ alert.syscall_number }} - {{ alert.message }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>
