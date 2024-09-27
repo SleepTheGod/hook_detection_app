@@ -1,3 +1,15 @@
+# Download The App
+```bash
+git clone https://github.com/SleepTheGod/hook_detection_app
+```
+# CD into the directory of the application
+```bash
+cd hook_detection_app
+```
+# View the files of the app
+```bash
+ls -lra or ls * both commands work or ls
+```
 # Run the Application
 Install Required Packages
 Make sure to install Flask and other dependencies
