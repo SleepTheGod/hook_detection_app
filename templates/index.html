@@ -1,1 +1,24 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Hook Detection Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Hook Detection Dashboard</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('hooks') }}">View Detected Hooks</a>
+    </nav>
+    <main>
+        <h2>Welcome to the Hook Detection System</h2>
+        <p>Monitor system calls and receive alerts when hooks are detected.</p>
+        <form action="{{ url_for('start_monitoring') }}" method="post">
+            <button type="submit">Start Monitoring</button>
+        </form>
+    </main>
+</body>
+</html>
